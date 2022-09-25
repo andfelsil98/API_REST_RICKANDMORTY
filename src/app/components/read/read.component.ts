@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
+//services
 import { ElementService } from 'src/app/services/element.service';
+
+//interfaces
+import { Element } from '../../models/element.model';
 
 @Component({
   selector: 'app-read',
@@ -21,7 +26,7 @@ export class ReadComponent implements OnInit {
   readElements () {
     this.elementService.getAllElement()
     .subscribe (data => {
-      console.log(data);
+      this.elements = data;
     })
   }
 
