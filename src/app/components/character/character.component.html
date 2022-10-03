@@ -1,0 +1,9 @@
+<h1>  {{ result.id }}  </h1>
+<p>  {{ result.name }}  </p>
+<!-- <p>  {{ result.type }}  </p> -->
+<a [routerLink]="['/details', result.id]">
+  <img [src]="result.image" alt="">
+</a>
+
+<button class="btn btn-primary">Ver detalles</button>
+<!-- routerLink="." [queryParams]="{ details: result.id}"  -->

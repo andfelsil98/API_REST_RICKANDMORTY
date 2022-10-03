@@ -4,14 +4,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReadComponent } from './components/read/read.component';
-import { ElementComponent } from './components/element/element.component';
+
+import { CharactersComponent } from './components/characters/characters.component';
+import { CharacterComponent } from './components/character/character.component';
+import { CharacterDetailsComponent } from './components/character-details/character-details.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReadComponent,
-    ElementComponent
+    CharactersComponent,
+    CharacterComponent,
+    CharacterDetailsComponent,
+
   ],
   imports: [
     BrowserModule,
