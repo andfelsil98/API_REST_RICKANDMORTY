@@ -9,12 +9,12 @@ import { Result, RickAndMorty } from 'src/app/models/rickandmorty.model';
 @Component({
   selector: 'app-character-details',
   templateUrl: './character-details.component.html',
-  styleUrls: ['./character-details.component.css']
+  styleUrls: ['./character-details.component.scss']
 })
 export class CharacterDetailsComponent implements OnInit {
 
   characterId: number | null = null;
-  character: RickAndMorty[] = [];
+  character: Result | null = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -39,13 +39,9 @@ export class CharacterDetailsComponent implements OnInit {
           return [null];
         })
       )
-      .subscribe((data:RickAndMorty[]) => {
+      .subscribe((data) => {
           this.character = data;
           console.log(data);
-          // Object.keys(this.character).map(key => {
-          //   const value = this.character[key]
-          //   console.log(value)
-          // })
       });
   }
 

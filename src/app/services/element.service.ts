@@ -22,6 +22,6 @@ export class ElementService {
     }
     //metodo para obtener un personaje
     getOneCharacter(id: number) {
-      return this.http.get(`${this.apiUrl}/${id}`);
+      return this.http.get<Result>(`${this.apiUrl}/${id}`);
     }
 }
